@@ -1,0 +1,41 @@
+[package]
+name = "rs-paths"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+python = ["pyo3/extension-module"]
+
+# see more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rs_paths"
+crate-type = ["lib", "cdylib"]
+path = "src/lib.rs"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "bindgen"
+path = "src/occt/build.rs"
+
+[dependencies]
+derive_more = "0.99.17"
+enum_dispatch = "0.3.13"
+geo = "0.28.0"
+memoize = "0.4.2"
+num-complex = "0.4.6"
+pyo3 = "0.21.1"
+readonly = "0.2.12"
+simplify-rs = "0.1.5"
+spec_math = "0.1.5"
+svgtypes = "0.15.1"
+bindgen = "0.69.4"
+efd = "10.1.3"
+nalgebra = "0.32.6"
+
+[lints.clippy]
+shadow_unrelated = "warn"
+stmt_expr_attributes = "allow"
+

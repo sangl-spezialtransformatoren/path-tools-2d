@@ -1,0 +1,29 @@
+[build-system]
+requires = ["maturin>=1.6,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "rs-paths"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+[tool.maturin]
+features = ["python"]
+
+[tool.poetry]
+version = "0.0.1"
+name = "rs-paths"
+description = ""
+authors = ["Adrian Schneider <adrian.schneider@sangl.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[tool.poetry.dev-dependencies]
+maturin = "^1.6.0"
